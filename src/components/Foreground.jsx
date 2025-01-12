@@ -2,9 +2,7 @@ import React from "react";
 import Card from "./Card";
 import { useRef } from "react";
 
-
 const Foreground = () => {
-
   const ref = useRef(null);
 
   const data = [
@@ -51,11 +49,14 @@ const Foreground = () => {
   ];
 
   return (
-      <div ref={ref} className="w-full h-full z-[3] top-0 left-0 fixed flex gap-5 flex-wrap p-14 justify-center">
-        {data.map((item, index)=>(
-          <Card data={item} reference={ref}/>
-        ))}
-      </div>
+    <div
+      ref={ref}
+      className="w-full h-full z-[3] top-0 left-0 fixed flex gap-5 flex-wrap p-14 justify-center"
+    >
+      {data.map((item, index) => (
+        <Card data={item} reference={ref} />
+      ))}
+    </div>
   );
 };
 
